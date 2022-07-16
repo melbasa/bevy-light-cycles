@@ -1,0 +1,165 @@
+{
+	"connections": [
+		{
+			"from": "crystal",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "crystal",
+			"from_port": 0,
+			"to": "normal_map2",
+			"to_port": 0
+		},
+		{
+			"from": "normal_map2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 4
+		},
+		{
+			"from": "crystal",
+			"from_port": 0,
+			"to": "occlusion2",
+			"to_port": 0
+		},
+		{
+			"from": "occlusion2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 5
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@@2145",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 0,
+				"y": 0
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.5,
+				"emission_energy": 0,
+				"flags_transparent": true,
+				"metallic": 0.2,
+				"normal": 1,
+				"roughness": 0.6,
+				"size": 10,
+				"sss": 0
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "material"
+		},
+		{
+			"name": "crystal",
+			"node_position": {
+				"x": -774.817139,
+				"y": 19.395184
+			},
+			"parameters": {
+				"param0": 5,
+				"param1": 5
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "crystal"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -419.697021,
+				"y": -107.364822
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 1,
+							"b": 0.28125,
+							"g": 0.28125,
+							"pos": 0,
+							"r": 0.28125
+						},
+						{
+							"a": 1,
+							"b": 0.652344,
+							"g": 0.652344,
+							"pos": 1,
+							"r": 0.652344
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "colorize"
+		},
+		{
+			"name": "normal_map2",
+			"node_position": {
+				"x": -352.697021,
+				"y": 30.635193
+			},
+			"parameters": {
+				"buffer": 1,
+				"param2": 1,
+				"size": 10,
+				"strength": 1
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "normal_map2"
+		},
+		{
+			"name": "occlusion2",
+			"node_position": {
+				"x": -432.697021,
+				"y": 197.635193
+			},
+			"parameters": {
+				"param0": 10,
+				"param1": 20,
+				"param2": 1.5,
+				"param3": 1
+			},
+			"seed": 0,
+			"seed_locked": false,
+			"type": "occlusion2"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed": 0,
+	"seed_locked": false,
+	"shortdesc": "",
+	"type": "graph"
+}
